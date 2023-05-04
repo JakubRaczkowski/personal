@@ -1,0 +1,32 @@
+{
+  "name": "personal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/bebas-neue": "^4.5.9",
+    "@fontsource/crimson-pro": "^4.5.11",
+    "@fontsource/eb-garamond": "^4.5.11",
+    "@types/node": "18.15.12",
+    "@types/nodemailer": "^6.4.7",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.4",
+    "next": "13.3.0",
+    "nodemailer": "^6.9.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "typescript": "5.0.4"
+  }
+}
