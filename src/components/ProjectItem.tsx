@@ -13,7 +13,6 @@ import { BsGithub } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 import { useState } from "react";
 
-// import reddit from "../../public/reddit.png";
 
 const ProjectItem = ({
   title,
@@ -32,11 +31,11 @@ const ProjectItem = ({
     <WrapItem
       width="100%"
       bg="gray.100"
-      minHeight={{base:"20vh",md:"50vh"}}
-      maxHeight={{base:"70vh",md:"50vh"}}
+      // minHeight={{base:"20vh",md:"50vh"}}
+      // maxHeight={{base:"70vh",md:"65vh"}}
       display="flex"
       flexDir="row"
-      boxShadow="0px 4px 6px rgba(0, 0, 0, 0.2)" // Adds a subtle box-shadow
+      boxShadow="0px 4px 6px rgba(0, 0, 0, 0.2)"
       borderRadius="md"
       p="4"
       _hover={{
@@ -76,13 +75,12 @@ const ProjectItem = ({
             <Stack
               direction="row"
               spacing="5"
-              position="relative"
-              left="0%"
-              top="-100%"
+              position="absolute"
+              left="50%"
+              top="50%"
+              transform="translate(-50%, -50%)"
               justify="center"
               align="center"
-              height="100%"
-              width="100%"
             >
               <Link href={github} target="_blank">
                 <Icon
@@ -92,14 +90,16 @@ const ProjectItem = ({
                 />
               </Link>
 
-              {demo && <Link href={demo} target="_blank">
-                <Icon
-                  as={FiExternalLink}
-                  boxSize="12"
-                  color="black"
-                  _hover={{ color: "blue.500" }}
-                />
-              </Link>}
+              {demo && (
+                <Link href={demo} target="_blank">
+                  <Icon
+                    as={FiExternalLink}
+                    boxSize="12"
+                    color="black"
+                    _hover={{ color: "blue.500" }}
+                  />
+                </Link>
+              )}
             </Stack>
           )}
         </Box>

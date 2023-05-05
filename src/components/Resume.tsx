@@ -21,6 +21,7 @@ const Resume = () => {
       right="5%"
       zIndex={10}
       mb='6'
+      display={{ base: "none", md: "flex" }}
     >
       <Text
         textAlign="center"

@@ -30,12 +30,16 @@ export const Button: ComponentStyleConfig = {
     },
     navbar: {
       color: "black",
-      borderRadius: "0",
-      fontSize: "14pt",
+      borderRadius: "4",
+      fontSize: { base: "14px", md: "16px" },
       fontWeight: 500,
       fontFamily: "title",
-      letterSpacing: "3px",
+      letterSpacing: "1px",
 
+      _focus: {
+        shadow: 'shadowColor',
+        borderRadius: "4",
+      },
       _hover: {
         shadow: shadowColor,
         borderRadius: "4",
@@ -44,10 +48,6 @@ export const Button: ComponentStyleConfig = {
         transitionDuration: "0.2s",
         transitionTimingFunction: "ease-in-out",
       },
-      // _focus: {
-      //   shadow: shadowColor,
-      //   borderRadius: "4",
-      // },
     },
   },
 };

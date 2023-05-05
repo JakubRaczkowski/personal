@@ -88,7 +88,8 @@ const Contact = () => {
   };
   return (
     <Flex
-      p="20px 60px"
+    id='contact'
+      p={{ base: 3, md: "20px 60px" }}
       width={{ base: "100%", sm: "90%", md: "75%" }}
       mx="auto"
       direction="column"
@@ -97,18 +98,13 @@ const Contact = () => {
         fontFamily="title"
         color="black"
         fontWeight="700"
-        fontSize="50px"
+        fontSize={{ base: "30px", md: "50px" }}
         p="0"
       >
         / Contact
       </Text>
 
-      <Box
-        width={{ base: "100%", md: "75%" }}
-        mx="auto"
-        p="10"
-        pb="0"
-      >
+      <Box width={{ base: "100%", md: "75%" }} mx="auto" p="10" pb="0">
         <Box width="80%" mx="auto" p="1">
           <Text
             textAlign="center"

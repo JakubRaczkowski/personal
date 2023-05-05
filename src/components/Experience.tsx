@@ -10,60 +10,79 @@ import {
   Box,
   Stack,
   HStack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 const Experience = () => {
+
+    const orientation = useBreakpointValue({
+      base: "horizontal",
+      sm: "vertical",
+    });
+
   return (
     <Flex
-      p="20px 60px"
+    id='experience'
+      p={{ base: 3, md: "20px 60px" }}
       width={{ base: "100%", sm: "90%", md: "75%" }}
       mx="auto"
-      minHeight="100vh"
+      minHeight={{ base: "100vh", sm: "100vh" }}
       direction="column"
+      mb={{ base: 0, md: "10" }}
     >
-      <Text fontFamily="title" color="black" fontWeight="700" fontSize="50px">
+      <Text
+        fontFamily="title"
+        color="black"
+        fontWeight="700"
+        fontSize={{ base: "30px", md: "50px" }}
+      >
         / Exp & Edu
       </Text>
 
-      <Box width={{ base: "100%", md:"75%" }} mx="auto" my="10%">
+      <Box width={{ base: "100%", md: "75%" }} mx="auto" my="10%">
         <Tabs
           position="relative"
           variant="unstyled"
-          size="lg"
-          orientation="vertical"
+          size={{ base: "sm", md: "lg" }}
+          // @ts-ignore
+          orientation={orientation}
         >
-          <TabList mr={{ base: "1", md: "4", lg: "16" }}>
-            <Tab fontSize="20px">
-              <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
-                {`</salt>`}
-              </Text>
-            </Tab>
-            <Tab fontSize="20px">
-              <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
-                Freelancer
-              </Text>
-            </Tab>
+          <Flex justify="center">
+            <TabList mr={{ base: "0", md: "4", lg: "16" }}>
+              <Tab>
+                <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
+                  {`</salt>`}
+                </Text>
+              </Tab>
+              <Tab>
+                <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
+                  Freelancer
+                </Text>
+              </Tab>
 
-            <Tab fontSize="20px">
-              <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
-                Hospitality
-              </Text>
-            </Tab>
+              <Tab>
+                <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
+                  Hospitality
+                </Text>
+              </Tab>
 
-            <Tab fontSize="20px">
-              <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
-                Law
-              </Text>
-            </Tab>
-          </TabList>
+              <Tab fontSize="20px">
+                <Text fontFamily="bio" fontSize={{ base: "xl", md: "2xl" }}>
+                  Law
+                </Text>
+              </Tab>
+            </TabList>
+          </Flex>
+
           <TabIndicator
+            alignSelf="center"
             bg="blue.500"
             height="3px"
             borderRadius="1px"
             width="2px"
           />
 
-          <TabPanels>
+          <TabPanels height={"350px"} mt={{ base: "10%", sm: "0" }}>
             <TabPanel padding="2">
               <Stack
                 fontFamily="bio"

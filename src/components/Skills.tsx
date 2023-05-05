@@ -23,7 +23,8 @@ import { skills } from "../data/projectData";
 const Skills = () => {
   return (
     <Flex
-      p="20px 60px"
+    id='skills'
+      p={{ base: 3, md: "20px 60px" }}
       width={{ base: "100%", sm: "90%", md: "75%" }}
       mx="auto"
       minHeight="100vh"
@@ -33,8 +34,7 @@ const Skills = () => {
         fontFamily="title"
         color="black"
         fontWeight="700"
-        fontSize="50px"
-        p="0"
+        fontSize={{ base: "30px", md: "50px" }}
       >
         / Skills
       </Text>
@@ -58,22 +58,30 @@ const Skills = () => {
           </Text>
         </Box>
 
-        <SimpleGrid columns={4} height="90%" align="center" rowGap="10">
+        <SimpleGrid
+          columns={[2, 3, 4]}
+          height="90%"
+          align="center"
+          rowGap={[6, 8, 10]}
+          columnGap={[2, 4, 6]}
+        >
           {skills.map(skill => {
             return (
               <Box
                 key={skill.name}
-                borderRadius="4"
                 _hover={{
                   background: "white",
                   transform: " scale(1.2) ",
                   transitionDuration: "0.2s",
                   transitionTimingFunction: "ease-in-out",
-                  
                 }}
               >
                 <Icon as={skill.icon} boxSize="40px" color={`${skill.color}`} />
-                <Text fontSize={{base:'10px',sm: 'md', md:'md'}} fontFamily="bio" fontWeight="semibold">
+                <Text
+                  fontSize={{ base: "12px", sm: "sm", md: "md" }}
+                  fontFamily="bio"
+                  fontWeight="semibold"
+                >
                   {skill.name}
                 </Text>
               </Box>

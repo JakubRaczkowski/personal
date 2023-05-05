@@ -7,10 +7,12 @@ import Contact from "../src/components/Contact";
 import Social from "../src/components/Social";
 import Resume from "../src/components/Resume";
 import Experience from "../src/components/Experience";
+import Footer from "../src/components/Footer";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <>
+    <Box id='top'>
       <Navbar />
       <Hero />
       <Social />
@@ -20,7 +22,8 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
 
-    </>
+    </Box>
   );
 }

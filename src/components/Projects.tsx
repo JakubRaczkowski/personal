@@ -5,7 +5,8 @@ import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (
     <Flex
-      p="20px 60px"
+      id="projects"
+      p={{ base: 3, md: "20px 60px" }}
       width={{ base: "100%", sm: "90%", md: "75%" }}
       mx="auto"
       direction="column"
@@ -14,18 +15,12 @@ const Projects = () => {
         fontFamily="title"
         color="black"
         fontWeight="700"
-        fontSize="50px"
-        p="0"
+        fontSize={{ base: "30px", md: "50px" }}
       >
         {" "}
         / Projects
       </Text>
-      <Wrap
-        width={{ base: "100%", md: "75%" }}
-        spacing="10"
-        mx="auto"
-        my="5%"
-      >
+      <Wrap width="100%" spacing="10" mx="auto" my="5%">
         {projects.map(project => {
           return <ProjectItem key={project.title} {...project} />;
         })}

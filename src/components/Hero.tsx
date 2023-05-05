@@ -5,13 +5,13 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <Flex
-      p="20px 60px"
+      p={{ base: 3, md: "20px 60px" }}
       width={{ base: "100%", sm: "90%", md: "75%" }}
-      minHeight="80vh"
+      minHeight={{ base: "85vh", md: "80vh" }}
       mx="auto"
       direction="column"
     >
-      <Flex p="24" width="100%" justifyContent="space-around" my="auto">
+      <Flex p="1" width="100%" justifyContent="space-around" my="auto">
         <Flex mr={{ base: "3", sm: "5", md: "8" }}>
           <Stack
             pt={{ base: "4", sm: "6", md: "8", lg: "10" }}
@@ -21,7 +21,7 @@ const Hero = () => {
               fontFamily="title"
               color="black"
               fontWeight="700"
-              fontSize={{ base: "28px", sm: "38px", md: "60px", lg: "100px" }}
+              fontSize={{ base: "30px", sm: "40px", md: "70px", lg: "90px" }}
               p="0"
               transform="skewX(0deg) translateX(0px)"
               transitionDuration="0.25s"
@@ -38,7 +38,7 @@ const Hero = () => {
               fontFamily="title"
               color="black"
               fontWeight="700"
-              fontSize={{ base: "28px", sm: "38px", md: "60px", lg: "100px" }}
+              fontSize={{ base: "30px", sm: "40px", md: "70px", lg: "90px" }}
               p="0"
               transform="skewX(0deg) translateX(0px)"
               transitionDuration="0.25s"
@@ -55,7 +55,7 @@ const Hero = () => {
               fontFamily="subtitle"
               color="black"
               fontWeight="400"
-              fontSize={{ base: "22px", sm: "30px", md: "40px", lg: "60px" }}
+              fontSize={{ base: "20px", sm: "27px", md: "40px", lg: "54px" }}
               p="0"
               position="relative"
               _before={{
@@ -81,16 +81,15 @@ const Hero = () => {
           <Flex justifyContent="center" alignItems="center">
             <Flex
               maxWidth={{
-                base: "200px",
-                sm: "250px",
-                md: "300px",
-                lg: "300px",
+                base: "124px",
+                sm: `${Math.round(1.0925 * 130)}px`,
+                md: `${Math.round(1.2825 * 130)}px`,
+                lg: `${Math.round(1.52 * 130)}px`,
               }}
               minWidth={{
-                base: "130px",
-                sm: "170px",
-                md: "220px",
-                lg: "220px",
+                base: "95px",
+                sm: `${Math.round(1.235 * 100)}px`,
+                md: `${Math.round(1.33 * 100)}px`,
               }}
               mx="auto"
             >

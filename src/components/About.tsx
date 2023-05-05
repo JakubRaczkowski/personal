@@ -3,9 +3,11 @@ import Image from "next/image";
 import yo from "../../public/yo.jpg"
 const About = () => {
   return (
-    <Flex minHeight="100vh">
+    <Flex 
+    id='bio'
+    minHeight="100vh">
       <Flex
-        p="20px 60px"
+        p={{ base: 3, md: "20px 60px" }}
         width={{ base: "100%", sm: "90%", md: "75%" }}
         mx="auto"
         direction="column"
@@ -14,7 +16,7 @@ const About = () => {
           fontFamily="title"
           color="black"
           fontWeight="700"
-          fontSize="50px"
+          fontSize={{base:'30px', md:"50px"}}
           p="0"
         >
           / Bio
